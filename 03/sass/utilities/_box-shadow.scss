@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.box-shadow-1 {
+  box-shadow: $box-shadow-1;
+}
+
+.box-shadow-2 {
+  box-shadow: $box-shadow-2;
+}

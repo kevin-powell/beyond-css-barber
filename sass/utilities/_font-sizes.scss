@@ -1,10 +1,11 @@
 @use "../abstracts" as *;
 
-@each $size-name, $size-value in $font-sizes {
-  .fs-#{$size-name} {
-    font-size: $size-value;
-    @if $size-name > 600 {
-      line-height: 1.1;
+@each $screen-size, $size-map in $font-sizes {
+  @each $size-name, $size-value in $size-map {
+    @if $screen-size == small {
+      .fs-#{$size-name} {
+        font-size: var(--fs-#{$size-name});
+      }
     }
   }
 }

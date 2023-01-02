@@ -1,0 +1,14 @@
+@use "abstracts" as *;
+
+.nav {
+  --flex-column-gap: $navigation-gap;
+  list-style: none;
+
+  a {
+    @include heading($navigatino-font-size, $navigation-color);
+
+    &:is(:hover, :focus) {
+      color: $navigation-color-hover;
+    }
+  }
+}
